@@ -10,7 +10,8 @@ app.engine('handlebars', exphbs({
 
 app.set('view engine', 'handlebars');
 //setup express static public folder for css and js and images
-app.use(express.static('public'));
+
+app.use('/',express.static('public'));
 const port = process.env.PORT || 3000;
 
 app.get('/home',(req, res) => {
@@ -29,6 +30,6 @@ app.get('/portfolio',(req, res) => {
     res.render('portfolio');
 });
 
-app.listen(port, () => {
-    console.log('Server is running on port ${port}');
+app.listen(3000,() => {
+    console.log("The server is running");
 });
