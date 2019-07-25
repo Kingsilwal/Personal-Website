@@ -1,0 +1,17 @@
+<div class = "container">
+    <h1> Messages </h1>
+    {{#each messages}}
+    <div class="media">
+  <div class="media-body">
+    <h5 class="mt-0">{{name}}</h5>
+   <h4>{{email}}</h4>
+    <p>{{message}}</p>
+    <br>
+    <small>{{date}}</small>
+  </div>
+</div>
+    <hr> 
+    {{else}}
+    <p> No Messages Found... </p>
+   {{/each}}
+</div>
